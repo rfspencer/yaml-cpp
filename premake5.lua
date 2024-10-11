@@ -9,7 +9,6 @@ project "yaml-cpp"
 	{
 		"src/**.h",
 		"src/**.cpp",
-		
 		"include/**.h"
 	}
 
@@ -18,21 +17,18 @@ project "yaml-cpp"
 		"include"
 	}
 
-	defines
-	{
-		"YAML_CPP_STATIC_DEFINE"
-	}
+
 
 	filter "system:windows"
 		systemversion "latest"
 		cppdialect "C++17"
-		staticruntime "off"
+		staticruntime "on"
 
 	filter "system:linux"
 		pic "On"
 		systemversion "latest"
 		cppdialect "C++17"
-		staticruntime "off"
+		staticruntime "on"
 
 	filter "configurations:Debug"
 		runtime "Debug"
